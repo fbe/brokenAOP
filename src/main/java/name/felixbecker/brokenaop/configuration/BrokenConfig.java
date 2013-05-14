@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@Import(WorkingAspect.class)
+@Import(AppConfig.class)
 public class BrokenConfig {
 	
 	@Bean
