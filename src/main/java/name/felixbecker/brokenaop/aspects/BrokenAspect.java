@@ -8,7 +8,7 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class BrokenAspect {
 	
-	@Pointcut(value="execution(* *(..))")
+	@Pointcut(value="(execution(* *(..)) && !within(name.felixbecker.brokenaop.configuration.*))")
 	public void allMethods() {}
 	
 	@Before("allMethods()")
