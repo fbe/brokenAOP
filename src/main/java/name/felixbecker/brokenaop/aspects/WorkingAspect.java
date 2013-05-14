@@ -10,7 +10,7 @@ public class WorkingAspect {
 	@Pointcut(value="execution(* name.felixbecker.brokenaop..*(..))")
 	public void allMethods() {}
 	
-	@Before("allMethods()")
+	@Before("allMethods() && !execution(* @org.springframework.context.annotation.Configuration *..*(..))")
 	public void logAllMethodEnters() {
 		System.out.println("BrokenAspect: Method enter!");
 	}
