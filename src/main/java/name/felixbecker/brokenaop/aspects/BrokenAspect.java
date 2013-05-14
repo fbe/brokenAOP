@@ -7,7 +7,6 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class BrokenAspect {
 	
-//	@Pointcut(value="execution(* name.felixbecker.brokenaop..*(..))")
 	@Pointcut(value="execution(* *(..))")
 	public void allMethods() {}
 	
