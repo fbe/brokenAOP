@@ -81,6 +81,27 @@
 			<version>4.11</version>
 		</dependency>
 
+	<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>brokenAOP</finalName>
@@ -134,9 +155,8 @@
 		<h2.version>1.3.165</h2.version>
 		<hibernate.version>4.1.1.Final</hibernate.version>
 		<spring.version>3.2.2.RELEASE</spring.version>
-		<jetty.version>8.1.3.v20120416</jetty.version>
-		<jlatexmath.version>0.9.6</jlatexmath.version>
-		<tapestry5-jquery.version>3.3.4</tapestry5-jquery.version>
 		<aspectj.version>1.7.1</aspectj.version>
+				<slf4j.version>1.7.2</slf4j.version>
+		<logback.version>1.0.11</logback.version>
 	</properties>
 </project>

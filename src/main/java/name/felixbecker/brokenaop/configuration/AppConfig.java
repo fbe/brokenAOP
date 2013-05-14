@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableAspectJAutoProxy
 @EnableTransactionManagement
-@ComponentScan(basePackages={"name.felixbecker.brokenaop"}, excludeFilters={@Filter(type=FilterType.ASSIGNABLE_TYPE, value={WorkingConfig.class, BrokenConfig.class})})
+@ComponentScan(basePackages = "name.felixbecker.brokenaop", excludeFilters = @Filter(type = FilterType.ANNOTATION, value = Configuration.class))
 public class AppConfig {
 	
 	@Bean

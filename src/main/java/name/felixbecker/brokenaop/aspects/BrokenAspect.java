@@ -1,5 +1,6 @@
 package name.felixbecker.brokenaop.aspects;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -11,9 +12,8 @@ public class BrokenAspect {
 	public void allMethods() {}
 	
 	@Before("allMethods()")
-	public void logAllMethodEnters() {
-		System.out.println("BrokenAspect: Method enter!");
+	public void logAllMethodEnters(JoinPoint joinPoint) {
+		System.out.println("BrokenAspect: Method enter!" + joinPoint.toShortString());
 	}
-
 
 }
